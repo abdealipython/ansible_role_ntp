@@ -1,0 +1,6 @@
+---
+# defaults/main.yml
+ntp_servers:
+  - time.google.com
+  - time1.google.com
+# defaults file for snow

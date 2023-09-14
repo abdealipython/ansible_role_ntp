@@ -1,0 +1,7 @@
+# handlers/main.yml
+---
+- name: Restart NTP
+  service:
+    name: chronyd
+    state: restarted
+

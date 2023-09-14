@@ -1,0 +1,22 @@
+# tasks/main.yml
+---
+- name: Install NTP packages
+  become: yes
+  package:
+    name: chrony
+    state: present
+
+- name: Configure NTP servers
+  become: yes
+  template:
+    src: ntp.conf.j2
+    dest: /etc/chrony.conf
+  notify: Restart NTP
+
+- name: Start and enable NTP service
+  become: yes
+  service:
+    name: chronyd
+    state: started
+    enabled: yes
+

@@ -1,0 +1,5 @@
+# templates/ntp.conf.j2
+{% for server in ntp_servers %}
+server {{ server }} iburst
+{% endfor %}
+
