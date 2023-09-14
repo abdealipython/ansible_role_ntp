@@ -6,7 +6,7 @@
     name: chrony
     state: present
 
-- name: Configure NTP servers
+- name: Configure NTP servers...!!!!
   become: yes
   template:
     src: ntp.conf.j2
