@@ -13,7 +13,7 @@
     dest: /etc/chrony.conf
   notify: Restart NTP
 
-- name: Start and enable NTP servicie!!!
+- name: Start and enable NTP servicie....!!!
   become: yes
   service:
     name: chronyd
